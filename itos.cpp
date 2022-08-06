@@ -18,13 +18,12 @@
 template<typename T> std::string itos(const T &num) {
     std::ostringstream oss{};
     
-    //set precision to a number of base-10 digit that can be any value of type T
+    //set precision to a number of base-10 digits that can be any value of type T
     oss << std::setprecision(std::numeric_limits<T>::max_digits10);
     
     oss << num;
     
     return oss.str();
-
 }
 
 int main() {
